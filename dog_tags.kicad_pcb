@@ -21,14 +21,14 @@
 		(2 "B.Cu" signal "Back")
 		(13 "F.Paste" user)
 		(15 "B.Paste" user)
-		(5 "F.SilkS" user)
-		(7 "B.SilkS" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
 		(1 "F.Mask" user)
 		(3 "B.Mask" user)
 		(25 "Edge.Cuts" user)
 		(27 "Margin" user)
-		(31 "F.CrtYd" user)
-		(29 "B.CrtYd" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
 		(35 "F.Fab" user)
 	)
 	(setup
@@ -110,7 +110,6 @@
 		)
 		(capping no)
 		(filling no)
-		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -152,6 +151,163 @@
 	(property "COMMENT1" "https://engineering.redlucy404.de")
 	(property "REVISION" "1.0")
 	(property "TITLE" "Dog Tags")
+	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "88c9502d-8c14-4dad-bed4-7c812fe02844")
+		(at 145.034 94.234)
+		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(tags "capacitor handsolder")
+		(property "Reference" "AE1"
+			(at 0 -1.68 0)
+			(layer "F.SilkS")
+			(uuid "8cfd53c4-cdf9-4100-9b34-da4b11cc1827")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "LXMS21ACMD-220"
+			(at 0 1.68 0)
+			(layer "F.Fab")
+			(uuid "09a20477-fae6-48ad-8839-7ef0346bacee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a96715b8-4d81-41df-9584-337ec3bee3b3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dipole antenna"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "984a0bfe-4e53-4e06-bdf4-ef0b6b286503")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2182d716-7dc6-475a-8e87-717dcdc164a1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/d223d085-5903-4b9e-88cf-aebd52029077")
+		(sheetname "/")
+		(sheetfile "dog_tags.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.261252 -0.735)
+			(end 0.261252 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "64bdc01e-a9ec-47f5-9f11-891766a0554c")
+		)
+		(fp_line
+			(start -0.261252 0.735)
+			(end 0.261252 0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "526c0e68-7bdd-437d-bbc4-48e70eacfe23")
+		)
+		(fp_rect
+			(start -1.88 -0.98)
+			(end 1.88 0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "23f458a7-1b41-44c7-98f8-4fb9268f83d0")
+		)
+		(fp_rect
+			(start -1 -0.625)
+			(end 1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "cb1cefa9-653b-4bab-bc3a-eeec7980c984")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "8f115255-b755-4249-8508-83b05b5f4c9d")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "GND")
+			(pintype "input")
+			(uuid "eb589ed9-798a-400e-99fc-1414b7edf469")
+		)
+		(pad "2" smd roundrect
+			(at 1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "GND")
+			(pintype "input")
+			(uuid "4609dac3-1f1f-45d7-ac9d-6697305e2487")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(gr_poly
 		(pts
 			(xy 124.623212 80.040334) (xy 122.679797 80.703874) (xy 122.601549 79.929205) (xy 124.516041 79.764315)
@@ -4326,6 +4482,7 @@
 		)
 	)
 	(zone
+		(net "GND")
 		(layer "F.Cu")
 		(uuid "f1663913-fc1d-40b0-8b39-bf9ece35a4db")
 		(name "copper pour")
@@ -4342,6 +4499,37 @@
 		(polygon
 			(pts
 				(xy 113.157 70.104) (xy 113.157 101.981) (xy 163.83 101.6) (xy 163.576 69.723)
+			)
+		)
+	)
+	(zone
+		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu")
+		(uuid "a9aff759-1f2f-4daa-87f3-7957585cb75b")
+		(name "Antenna Keep-Out Zone")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "/")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 139.907 88.941) (xy 149.907 88.941) (xy 149.907 99.441) (xy 139.907 99.441)
 			)
 		)
 	)
